@@ -1,0 +1,16 @@
+{
+  "name": "whatscrm",
+  "version": "1.0.0",
+  "description": "This is a Chrome extension for WhatsApp to schedule messages, manage message templates, and auto-respond to first-time contacts.",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.1.33",
+    "typescript": "^5.9.3"
+  }
+}

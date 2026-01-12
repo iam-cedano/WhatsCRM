@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsCRM",
+  "version": "0.1.0",
+  "description": "A Chrome extension for WhatsApp to schedule messages, manage templates, and auto-respond to clients.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/"
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["dist/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "public/popup.html",
+    "default_icon": {
+      "16": "public/images/icon16.svg",
+      "48": "public/images/icon48.svg",
+      "128": "public/images/icon128.svg"
+    }
+  },
+  "icons": {
+    "16": "public/images/icon16.svg",
+    "48": "public/images/icon48.svg",
+    "128": "public/images/icon128.svg"
+  }
+}

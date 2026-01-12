@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WhatsCRM</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <h1>WhatsCRM</h1>
+
+  <div class="tab-buttons">
+    <button class="tab-button active" data-tab="templates">Templates</button>
+    <button class="tab-button" data-tab="scheduler">Scheduler</button>
+    <button class="tab-button" data-tab="bot">Auto-Responder</button>
+  </div>
+
+  <div id="templates" class="tab-content active">
+    <h2>Message Templates</h2>
+    <div class="form-group">
+      <textarea id="template-input" placeholder="Write your message template..."></textarea>
+      <button id="add-template-btn">Add Template</button>
+    </div>
+    <h3>Your Templates:</h3>
+    <ul id="templates-list"></ul>
+  </div>
+
+  <div id="scheduler" class="tab-content">
+    <h2>Schedule a Message</h2>
+    <div class="form-group">
+      <label for="template-select">Select a Template:</label>
+      <select id="template-select"></select>
+    </div>
+    <div class="form-group">
+      <label for="group-select">Select a Group/Contact:</label>
+      <select id="group-select" multiple></select>
+      <button id="refresh-groups-btn">Refresh Contacts</button>
+    </div>
+    <div class="form-group">
+      <label for="schedule-time">Select Date and Time:</label>
+      <input type="datetime-local" id="schedule-time" />
+    </div>
+    <button id="schedule-btn">Schedule Message</button>
+    <h3>Scheduled Messages:</h3>
+    <ul id="scheduled-list"></ul>
+  </div>
+
+  <div id="bot" class="tab-content">
+    <h2>Auto-Responder Bot</h2>
+    <div class="form-group">
+      <label for="bot-message">Response for first-time contacts:</label>
+      <textarea id="bot-message" placeholder="e.g., Hello! Thanks for contacting us. We will get back to you shortly."></textarea>
+    </div>
+    <button id="save-bot-btn">Save Bot Message</button>
+  </div>
+
+  <script src="../dist/popup.js"></script>
+</body>
+</html>
